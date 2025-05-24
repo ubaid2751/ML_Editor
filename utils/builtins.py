@@ -76,3 +76,40 @@ def count_total_words(sentence_list):
         total_words += len(tokens)
 
     return total_words
+
+def compute_flesh_reading_ease(number_of_words, number_of_sentences, number_of_syllables):
+    """
+    Compute the Flesch reading ease score.
+    :param number_of_words: total number of words
+    :param number_of_sentences: total number of sentences
+    :param number_of_syllables: total number of syllables
+    :return: Flesch reading ease score
+    """
+
+    w_by_s = 1.015 * (number_of_words / number_of_sentences)
+    sy_by_w = 84.6 * (number_of_syllables / number_of_words)
+    flesch_score = 206.835 - w_by_s - sy_by_w
+
+    return flesch_score
+
+def get_reading_level_from_flesch(flesch_score):
+    """
+    Get the reading level from the Flesch reading ease score.
+    :param flesch_score: Flesch reading ease score
+    :return: reading level
+    """
+
+    if flesch_score >= 90:
+        return "5th grade"
+    elif flesch_score >= 80:
+        return "6th grade"
+    elif flesch_score >= 70:
+        return "7th grade"
+    elif flesch_score >= 60:
+        return "8th-9th grade"
+    elif flesch_score >= 50:
+        return "10th-12th grade"
+    elif flesch_score >= 30:
+        return "College"
+    else:
+        return "College graduate"
