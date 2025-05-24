@@ -1,11 +1,13 @@
 import nltk
 import argparse
-from utils import (
+from utils.builtins import (
     count_word_usage,
     compute_total_average_word_length,
     compute_total_unique_words_fraction,
     count_total_syllables,
     count_total_words,
+    compute_flesch_reading_ease,
+    get_reading_level_from_flesch,
 )
 
 
