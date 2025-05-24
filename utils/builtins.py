@@ -77,7 +77,7 @@ def count_total_words(sentence_list):
 
     return total_words
 
-def compute_flesh_reading_ease(number_of_words, number_of_sentences, number_of_syllables):
+def compute_flesch_reading_ease(number_of_words, number_of_sentences, number_of_syllables):
     """
     Compute the Flesch reading ease score.
     :param number_of_words: total number of words

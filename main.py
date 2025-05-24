@@ -120,10 +120,9 @@ def get_suggestions(sentence_list):
     return result_str
 
 
-
 input_text = parse_arguments()
 processed = clean_input(input_text)
 tokenized_sentences = preprocess_input(processed)
 print(tokenized_sentences)
-# suggestions = get_suggestions(tokenized_sentences)
-
+suggestions = get_suggestions(tokenized_sentences)
+print(suggestions)
