@@ -1,2 +1,9 @@
 nltk
 textstat
+
+tqdm
+bs4
+pandas
+
+matplotlib
+scikit-learn
